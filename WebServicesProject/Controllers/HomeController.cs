@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Runtime.CompilerServices;
 using System.Text;
 using WebServicesProject.Services;
 
@@ -60,6 +61,32 @@ namespace WebServicesProject.Controllers
             builder.Append($"Hi, its {YourName}!\n my phone is {Phone}/n {Message}");
             await emailSender.SendEmailAsync("matyiokin2002@gmail.com", "LAB2", "SDsddsdsds");
             return RedirectToAction("Index");
+        }
+        public IActionResult FileLoad()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> FileLoad(List<IFormFile> files)
+        {
+            var size = files.Sum(f => f.Length);
+
+            var filePaths = new List<string>();
+            foreach (var formFile in files)
+            {
+                if (formFile.Length > 0)
+                {
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/wwwroot/Files", formFile.FileName);
+                    filePaths.Add(filePath);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await formFile.CopyToAsync(stream);
+                    }
+                }
+            }
+            return View();
         }
     }
 }
