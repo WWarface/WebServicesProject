@@ -23,3 +23,14 @@ C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\obj\Debug\n
 C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\obj\Debug\net6.0\WebServicesProject.genruntimeconfig.cache
 C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\obj\Debug\net6.0\ref\WebServicesProject.dll
 C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\libman.json
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\WebServicesProject.Services.dll
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\MailKit.dll
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\WebServicesProject.Services.pdb
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\MimeKit.pdb
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\MimeKit.xml
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\MailKit.pdb
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\MailKit.xml
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\bin\Debug\net6.0\BouncyCastle.Crypto.xml
+C:\Users\Haritone\source\repos\WebServicesProject\WebServicesProject\obj\Debug\net6.0\WebServicesProject.csproj.CopyComplete
