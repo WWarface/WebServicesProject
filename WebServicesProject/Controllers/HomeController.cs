@@ -17,34 +17,36 @@ namespace WebServicesProject.Controllers
         }
         public IActionResult Index()
         {
-            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -   {HttpContext.Request.Path}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");   
+            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -  {HttpContext.Request.Host}{HttpContext.Request.Path}{HttpContext.Request.QueryString}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
+
             return View();
         }
 
         public IActionResult About()
         {
-            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -   {HttpContext.Request.Path}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
+
+            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -  {HttpContext.Request.Host}{HttpContext.Request.Path}{HttpContext.Request.QueryString}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
 
             return View();
         }
 
         public IActionResult Brand()
-        {            
-            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -   {HttpContext.Request.Path}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
+        {
+            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -  {HttpContext.Request.Host}{HttpContext.Request.Path}{HttpContext.Request.QueryString}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
 
             return View();
         }
 
         public IActionResult Specials()
         {
-            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -   {HttpContext.Request.Path}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
+            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -  {HttpContext.Request.Host}{HttpContext.Request.Path}{HttpContext.Request.QueryString}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -   {HttpContext.Request.Path}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
+            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -  {HttpContext.Request.Host}{HttpContext.Request.Path}{HttpContext.Request.QueryString}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
 
             return View();
         }
@@ -52,9 +54,9 @@ namespace WebServicesProject.Controllers
         [HttpPost]
         public async Task<IActionResult> SendMessage(string YourName,string Email,string Phone,string Message)
         {
-            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -   {HttpContext.Request.Path}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
+            _logger.LogInformation($"time - {DateTime.Now.ToShortTimeString()};path -  {HttpContext.Request.Host}{HttpContext.Request.Path}{HttpContext.Request.QueryString}; remoteIP -  {_contextAccessor?.HttpContext?.Connection.RemoteIpAddress}");
 
-            StringBuilder builder=new StringBuilder();
+            StringBuilder builder =new StringBuilder();
             builder.Append($"Hi, its {YourName}!\n my phone is {Phone}/n {Message}");
             await emailSender.SendEmailAsync("matyiokin2002@gmail.com", "LAB2", "SDsddsdsds");
             return RedirectToAction("Index");
