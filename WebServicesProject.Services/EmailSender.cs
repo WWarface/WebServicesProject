@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MailKit.Net.Smtp;
 using MimeKit;
 
@@ -15,7 +11,6 @@ namespace WebServicesProject.Services
             var emailMessage = new MimeMessage();
 
             emailMessage.From.Add(new MailboxAddress("Student", "2003harik2003@gmail.com"));
-            //emailMessage.To.Add(new MailboxAddress("", email));
             emailMessage.To.Add(new MailboxAddress("", "matyiokin2002@gmail.com"));
             emailMessage.Subject = subject;
             emailMessage.Body = new TextPart("Plain")
